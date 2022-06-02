@@ -1,5 +1,166 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
-  font-size: large;
+.App{
+  background-color: lightgray;
+  padding: 2rem;
+}
+
+.inner-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2rem;
+  grid-template-areas:
+    "header header"
+    "overview overview"
+    "transmissionmetrics alerts";
+  line-height: 24px;
+}
+
+.cell{
+  padding: 2rem;
+  background-color: white;
+}
+
+/* Top header */
+.cell-0{
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locationdetails{
+  flex:auto
+}
+.state{
+  font-size: 32px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.date{
+  color: rgb(79, 79, 79);
+    font-size: 0.9rem;
+}
+
+.actions{
+  display:flex;
+  flex-direction: row;
+  align-items: left;
+  gap: 1rem;
+}
+
+.share{
+  
+}
+
+.findvaccine{
+  padding: 1rem;
+  font-size: 1rem;
+  max-height: 3.125rem;
+  text-decoration: none;
+  text-transform: none;
+  border-radius: 4px;
+  line-height: 1;
+  cursor: pointer;
+  letter-spacing: 0px;
+  font-family: Roboto;
+  font-weight: 700;
+  background-color: rgb(53, 103, 253);
+  color: white;
+  border: 1px solid rgb(53, 103, 253);
+  transition: background-color 0.1s linear 0s;
+}
+
+/* Location Data */
+
+.cell-1{
+  grid-area: overview;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "level level level level"
+  "metric metric metric metric";
+  row-gap: 2rem;
+
+}
+
+.locationscore{
+  grid-area: level;
+  gap: 2.25rem 2rem;
+}
+
+.framework{
+  font-weight: 500;
+    margin: 0px 0px 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: rgb(79, 79, 79);
+    text-transform: uppercase;
+}
+
+.level{
+  font-size: 1.5rem;
+  font-family: "Source Code Pro";
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+/* Metrics */
+.communitymetrics{
+grid-area: metric;
+display: flex;
+gap: 1rem;
+}
+
+.metric-name{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.metric-value{
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.metric-def{
+  font-size: 14px;
+  color: rgb(79, 79, 79);
+}
+
+.metric-container{
+  flex: 1;
+}
+
+
+/* Transmission metrics */
+.cell-2{
+  grid-area: transmissionmetrics;
+  display: block;
+  flex-direction: column;
+  line-height: 24px;
+}
+
+.transmissionheader{
+font-size: 16px;
+font-weight: bold;
+}
+
+.transmissionbody{
+  font-size: 14px;
+  color: rgb(79, 79, 79);
+}
+
+/* Alerts */
+.cell-3{
+  grid-area: alerts;
+  font-size: 16px;
+  font-size: 14px;
+}
+
+.alert-copy{
+  margin-bottom: 1rem;
 }
